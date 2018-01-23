@@ -22,6 +22,12 @@
       - Explore with increasing depth. This is good if we do not know the solution depth.
       - Very slow to compute.
   - Informed (Heuristic) Search
-     - Best First:
-     - Heuristic:
-     - A*:
+    - Best First:
+      - Uses a heuristic function to expand the most promising node in a greedy way.
+      - If h=0 constantly, BF behaves like BFS.
+      - Exponential run worst case, linear like DFS if the heurstic is very good.
+      - Not optimal, complete if only implemented check-loop.
+    - Heuristic:
+      - Heuristic uses previous knowledge of the problem to solve exactly one of its relaxed version.
+      - Use f=g+h where h is from Best First and g is the cost of path so far. Which combines Uniform and Best.
+    - A*:
