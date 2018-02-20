@@ -1,7 +1,7 @@
 # Classical Algorithms Memo  
 **Data Structures, Algorithm Design, AI**  
 
-- Search Algorithms  
+### Search Algorithms  
   - Uninformed Search  
     - BFS:  
       - Maintain a closed list of visited nodes (or tag them), and a queue of nodes to visit.
@@ -30,4 +30,18 @@
     - Heuristic:
       - Heuristic uses previous knowledge of the problem to solve exactly one of its relaxed version.
       - Use f=g+h where h is from Best First and g is the cost of path so far. Which combines Uniform and Best.
+      - Admissible : Optimistic, h(n) <= d(n).
     - A*:
+      - Admissible heuristic search f=max{g+h, fprev}
+      - Consistency: as we approach final state, the heuristic cost increasingly approach d(n). So h(n)<=c(n,n+1)+h(n+1).
+      - Dominance: h1, h2 both admissible, then if h2>=h1 for all n, h2 dominates h1.
+      - Optimal and Complete and Efficient with O(bd) run time if perfect heuristic, often subexponential.
+    - Iterative Deepening:
+      - DFS with priority based on f cost.
+### Optimization
+  - Gradient Descent:
+    - Find best neighbors, if better than self, move to that point and start again, if not, it is local optimum.
+  - Simulated Annealing:
+    - Can escape local optimum with probability function that decreases p as # of steps increase (p=e^-(E-Ei)/T).
+  - Local Beam Parallel:
+    - Does SA with k parallel tasks, and each round keep the best K results to run again.
