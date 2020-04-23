@@ -1,4 +1,4 @@
-# Classical Algorithms Memo  
+# Classical Search/Optimization Algorithms Memo  
 **Data Structures, Algorithm Design, AI**  
 
 ### Search Algorithms  
